@@ -1,0 +1,33 @@
+{
+	"name": "Gtracker",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"description": "Gtracker",
+	"icons": {
+		"16": "img/icon-16.png",
+		"128": "img/icon-128.png"
+	},
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*",
+		"webNavigation",
+		"cookies"
+	],
+	"background": {
+		"scripts": [
+			"js/lib/jquery.min.js",
+			"js/crext.js",
+			"js/services/action-service.js",
+			"js/services/storage-service.js",
+			"js/services/user-service.js",
+			"js/services/query-service.js",
+			"js/crext-background.js"
+		]
+	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://cdnjs.cloudflare.com; object-src 'self'",
+	"browser_action": {
+		"default_title": "Gtracker",
+		"default_popup": "popup.html"
+	}
+}

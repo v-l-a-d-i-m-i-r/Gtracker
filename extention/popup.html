@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/login-form.css">
+		<link rel="stylesheet" href="css/queries.css">
+
+		<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+		<script type="text/javascript" src="js/lib/microtemplate.js"></script>
+		<script type="text/javascript" src="js/crext.js"></script>
+		<script type="text/javascript" src="js/crext-utils.js"></script>
+		<script type="text/javascript" src="js/crext-render-template.js"></script>
+		<script type="text/javascript" src="js/services/action-service.js"></script>
+		<script type="text/javascript" src="js/crtext-main.js"></script>
+	</head>
+	<body>
+		<div id="content"></div>
+		
+		<script type="text/html" id="loginFormTmpl">
+			<form class="login-form">
+				<h2 class="login-form__title">Login form</h2>
+				<label class="login-form__label" for="email">Email</label>
+				<input class="login-form__text-field" type="email" name="email" id="email">
+				<label class="login-form__label" for="password">Password</label>
+				<input class="login-form__text-field" type="password" name="password" id="password">
+				<div class="login-form__button-group">
+					<button class="login-form__login-button" type="button" id="login-button">Login</button>
+					<button class="login-form__register-button" type="button" id="register-button">Register</button>
+				</div>
+			</form>
+		</script>
+		
+		<script type="text/html" id="queriesTmpl">
+			<div class="queries">
+				<h2 class="queries__title">Queries</h2>
+				<% for (var i = 0; i < obj.queries.length; i++) { %>
+					<a class="queries__link" href="<%= obj.queries[i].query %>" target="_blank"><%= crext.getQueryWords(obj.queries[i].query) %></a>
+				<% } %>
+				
+				<div class="queries__button-group">
+					<label class="queries__label" for="qty">Qty</label>
+					<input class="queries__qty-selector" type="text" value="<%= obj.queries.length %>" id="qty">
+					<button class="queries__logout-button" type="button" id="logout-button">Logout</button>
+				</div>
+			</div>
+		</script>
+	</body>
+</html>

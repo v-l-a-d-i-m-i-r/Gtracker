@@ -1,0 +1,38 @@
+.login-form {
+	display: block;
+}
+
+.login-form__title {
+	text-align: center;
+	font-size: 30px;
+}
+
+.login-form__label {
+	display: block;
+	width: 100%;
+	font-size: 20px;
+	margin: 15px 0 10px;
+}
+
+.login-form__text-field {
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 5px 10px;
+}
+
+.login-form__button-group {
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+.login-form__login-button {
+	float: left;
+	background: #457ABB;
+}
+
+.login-form__register-button {
+	float: right;
+	background: #47A577;
+}
